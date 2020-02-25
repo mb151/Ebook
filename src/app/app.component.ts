@@ -9,7 +9,7 @@ import * as firebase from 'firebase';
 export class AppComponent {
   constructor(){
     var firebaseConfig = {
-      apiKey: "AIzaSyBeipJr-NLVBte8cOafnqjsrmfINxk4wUs",
+      apiKey: "your API Firebase Key",
       authDomain: "ebookform-2cabc.firebaseapp.com",
       databaseURL: "https://ebookform-2cabc.firebaseio.com",
       projectId: "ebookform-2cabc",
