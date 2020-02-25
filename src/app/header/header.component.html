@@ -1,0 +1,28 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li routerLinkActive="active">
+                <a style="font-size: 25px;" routerLink="books">Livres <img style="width: 35px; height: 35px;"  src="../assets/images/bookcp.png"></a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav" >
+            <li style="top: 7px;" routerLinkActive="active">
+                <a routerLink="about">Appros de moi</a>
+            </li>
+            <li style="top: 7px;" routerLinkActive="active">
+                <a routerLink="contact">Contact</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li routerLinkActive="active" *ngIf="!isAuth">
+                <a routerLink="auth/signup">Créer un compte</a>
+            </li>
+            <li routerLinkActive="active" *ngIf="!isAuth">
+                <a routerLink="auth/signin">Connexion</a>
+            </li>
+            <li>
+                <a (click)="onSignOut()" style="cursor:pointer" *ngIf="isAuth">Déconnexion</a>
+            </li>
+        </ul>
+    </div>
+</nav>
