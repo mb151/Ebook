@@ -16,6 +16,8 @@ import { BooksService } from './services/books.service';
 import { Routes, RouterModule } from '@angular/router';
 import { MonprofileComponent } from './monprofile/monprofile.component';
 import { MoncontactComponent } from './moncontact/moncontact.component';
+import { FooterComponent } from './footer/footer.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 const appRoutes: Routes = [
@@ -25,7 +27,7 @@ const appRoutes: Routes = [
   { path: 'books/new', canActivate: [AuthGuardService], component: BookFormComponent },
   { path: 'books/view/:id', canActivate: [AuthGuardService], component: SingleBookComponent },
   { path: 'about', component: MonprofileComponent },
-  { path: 'contact', component: MoncontactComponent },
+  { path: 'contact',  component: MoncontactComponent },
   { path: '', redirectTo: 'books', pathMatch: 'full' },
   { path: '**', redirectTo: 'books' }
 ]
@@ -39,7 +41,8 @@ const appRoutes: Routes = [
     BookFormComponent,
     HeaderComponent,
     MonprofileComponent,
-    MoncontactComponent
+    MoncontactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AngularFontAwesomeModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [AuthGuardService, AuthService, BooksService],
