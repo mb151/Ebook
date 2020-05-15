@@ -1,7 +1,9 @@
 <div class="row">
-    <div class="col-md-4">
-        <img style="max-width: 250px;" *ngIf="book.photo" [src]="book.photo"></div>
-        <div class="col-md-4 offset-md-4">
+    <div class="col-md-3">
+        <img style="max-width: 250px;left: 50px;" *ngIf="book.photo" [src]="book.photo"></div>
+        <div class="col-md-6 offset-md-6">
+            <a routerLink="">Like <span class="badge badge-primary">5</span></a>
+            <a routerLink="">Unlike <span class="badge badge-danger">5</span></a>
         <h1 style="text-align: center; ">{{ book.title }}</h1>
         <h3 style="text-align: center; font-weight: bold;">{{ book.author }}</h3>
         <p style="text-align: justify;">{{ book.synopsis }}</p>

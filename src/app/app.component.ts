@@ -7,16 +7,16 @@ import * as firebase from 'firebase';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(){
+  constructor() {
     var firebaseConfig = {
-      apiKey: "API_KEY",
-      authDomain: "",
-      databaseURL: "",
-      projectId: "",
-      storageBucket: "",
-      messagingSenderId: "",
-      appId: "",
-      measurementId: ""
+      apiKey: "AIzaSyBeipJr-NLVBte8cOafnqjsrmfINxk4wUs",
+      authDomain: "ebookform-2cabc.firebaseapp.com",
+      databaseURL: "https://ebookform-2cabc.firebaseio.com",
+      projectId: "ebookform-2cabc",
+      storageBucket: "ebookform-2cabc.appspot.com",
+      messagingSenderId: "1055244044686",
+      appId: "1:1055244044686:web:9e110ed6fa3953ddb4bcdf",
+      measurementId: "G-D4LLQKXFT1"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
